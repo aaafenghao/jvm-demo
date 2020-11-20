@@ -1,0 +1,4 @@
+# Project exclude paths
+/annotation/target/
+/annotation1/target/
+/example/target/
