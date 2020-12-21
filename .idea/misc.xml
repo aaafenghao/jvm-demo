@@ -11,6 +11,9 @@
         <option value="$PROJECT_DIR$/example/pom.xml" />
         <option value="$PROJECT_DIR$/annotation1/pom.xml" />
         <option value="$PROJECT_DIR$/annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/myagent/pom.xml" />
+        <option value="$PROJECT_DIR$/jmc/pom.xml" />
+        <option value="$PROJECT_DIR$/design/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2005, 2014, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -22,45 +22,26 @@
  * or visit www.oracle.com if you need additional information or have any
  * questions.
  */
+package org.sample.openjdk;
 
-package org.sample;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-import org.openjdk.jmh.annotations.*;
-import org.openjdk.jmh.runner.Runner;
-import org.openjdk.jmh.runner.RunnerException;
-import org.openjdk.jmh.runner.options.Options;
-import org.openjdk.jmh.runner.options.OptionsBuilder;
+/**
+ * <p>GroupThreads defines how many threads are participating in running
+ * a particular {@link Benchmark} method in the group.</p>
+ *
+ * @see Group
+ */
+@Inherited
+@Target({ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface GroupThreads {
 
-import java.util.concurrent.TimeUnit;
-
-@BenchmarkMode(Mode.AverageTime)
-@State(Scope.Thread)
-@OutputTimeUnit(TimeUnit.MICROSECONDS)
-public class MyBenchmark {
-
-
-    //@Fork(5)
-    @Benchmark
-    public void testMethod() {
-        // place your benchmarked code here
-/*        if("1".equals("1")){
-//            System.out.println("---");
-        }*/
-/*        switch(1){
-            case 1:
-                break;
-        }*/
-
-    }
-
-    public static void main(String[] args) throws RunnerException {
-        Options options = new OptionsBuilder()
-                .include(MyBenchmark.class.getSimpleName())
-                .forks(5)
-                .warmupIterations(5)
-                .measurementIterations(5)
-                .build();
-        new Runner(options).run();
-    }
+    /** @return number of threads to run the concrete method with. */
+    int value() default 1;
 
 }
