@@ -1,0 +1,11 @@
+<beans>
+
+    <bean id = "rateLimiter" class="com.fh.factory.di.RateLimiter">
+        <constructor-arg ref="redisCount"/>
+    </bean>
+
+    <bean id="redisCount" class="com.fh.factory.di.RedisCounter">
+        <constructor-arg type="String" value="localhost"/>
+        <constructor-arg type="int" value="9999"/>
+    </bean>
+</beans>

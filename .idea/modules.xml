@@ -4,10 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/annotation/annotation.iml" filepath="$PROJECT_DIR$/annotation/annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/annotation1/annotation1.iml" filepath="$PROJECT_DIR$/annotation1/annotation1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bytecode/bytecode.iml" filepath="$PROJECT_DIR$/bytecode/bytecode.iml" />
       <module fileurl="file://$PROJECT_DIR$/design/design.iml" filepath="$PROJECT_DIR$/design/design.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/jmc/jmc.iml" filepath="$PROJECT_DIR$/jmc/jmc.iml" />
       <module fileurl="file://$PROJECT_DIR$/myagent/myagent.iml" filepath="$PROJECT_DIR$/myagent/myagent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nio-demo/nio-demo.iml" filepath="$PROJECT_DIR$/nio-demo/nio-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/workspace_demo.iml" filepath="$PROJECT_DIR$/.idea/workspace_demo.iml" />
     </modules>

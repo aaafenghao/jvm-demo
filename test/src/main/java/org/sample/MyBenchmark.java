@@ -30,8 +30,11 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
+import sun.net.ftp.FtpClient;
 
+import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 @BenchmarkMode(Mode.AverageTime)
 @State(Scope.Thread)
@@ -50,7 +53,9 @@ public class MyBenchmark {
             case 1:
                 break;
         }*/
-
+        FtpClient ftpClient = sun.net.ftp.impl.FtpClient.create();
+        Map<String,Object> map = new HashMap<>();
+        List<Object> collect = map.values().stream().collect(Collectors.toList());
     }
 
     public static void main(String[] args) throws RunnerException {
